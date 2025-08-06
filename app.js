@@ -4,11 +4,17 @@ function sortear() {
     let ate = parseInt(document.getElementById('ate').value);
 
     if (de > ate){
-        alert ('O campo "Do Número" deve ser menor que o campo "Até o Número", tente novamente.')
+        alert ('O campo "Do Número" deve ser menor que o campo "Até o Número", tente novamente.');
+        return;
     }
 
     let sorteados = [];
     let numero;
+
+    if (sorteados<quantidade) {
+        alert (`Não é possível sortear ${quantidade} números entre ${de} e ${ate}. Altere-os`);
+        return;
+    }
 
     for(let i = 0; i < quantidade; i++) {
         numero = obterNumeroAleatorio (de, ate);
