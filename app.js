@@ -11,7 +11,7 @@ function sortear() {
     let sorteados = [];
     let numero;
 
-    if (sorteados<quantidade) {
+     if (quantidade > (ate - de + 1)) {
         alert (`Não é possível sortear ${quantidade} números entre ${de} e ${ate}. Altere-os`);
         return;
     }
